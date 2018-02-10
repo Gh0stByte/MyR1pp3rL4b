@@ -57,6 +57,7 @@ This script will rip your questions and answers from [**MyProgrammingLab by Pear
 
 ### To CSV
 * Select **Rip to CSV**
+
  ![](https://image.prntscr.com/image/R9IjsKI8TPWmRFSZUr2XXw.png) 
 
 * Enter **Chapter** or **Section** number
