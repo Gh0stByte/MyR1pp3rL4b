@@ -16,33 +16,33 @@ This script will rip your questions and answers from [**MyProgrammingLab by Pear
 
 | Var    | Description |
 | ------ | ----------- |
-| ```CurrentRipElem```| A variable to store the chapter/section to use in the save file|
-| ```Q_SEPERATE_TERM```| Delimiters for term. Default ```^^^```  |
-| ```Q_SEPERATE_DEFF```| Delimiters for card. Default ```~~~```  |
-| ```prevSubmissions```| Dictionary of submissions. Key ```exSSN```, Value```Array of previous submissions```|
-| ```instructions``` | Dictionary of instructions. Key ```exSSN```, Value ```Instruction string```| 
+| `CurrentRipElem`| A variable to store the chapter/section to use in the save file|
+| `Q_SEPERATE_TERM`| Delimiters for term. Default `^^^`  |
+| `Q_SEPERATE_DEFF`| Delimiters for card. Default `~~~`  |
+| `prevSubmissions`| Dictionary of submissions. Key `exSSN`, Value`Array of previous submissions`|
+| `instructions` | Dictionary of instructions. Key `exSSN`, Value `Instruction string`| 
 
 ### Methods
 
 | Method | Args | Return | Description |
 | ------ | ---- | ------ | ------------| 
-|```setSubmissions```|```s``` - dict of submissions|void|Set ```prevSubmissions``` to ```s```|
-|```getSubmissions```|none|```prevSubmissions```|Get ```prevSubmissions```|
-|```addSubmission```|```k``` - exSSN, ```s``` - submission|void|Set Key ```k``` and Value ```s``` of ```prevSubmissions```|
-|```setInstruction```|```i```-dictionary|void|Set ```instructions``` to ```i```|
-|```getInstructions```|none|```instructions```|Get ```instructions```|
-|```addInstruction```|```k```-exSSN, ```i```-instruction|void|Set Key ```k``` and Value ```i``` of ```instruction```|
-|```getexSSNs```|none|array of ```exSSN```s|Query user for chap/sec number and return all ```exSSN```s from that node as dict|
-|```getSubmissionsFromExSSNs```|```exs```-array of exSSNs|none|Sets ```prevSubmissions``` to the submission from each exSSN|
-|```getInstructionsFromExSSNs```|```exs```-array of exSSNs|none|Sets ```instructions``` to the instructions from each exSSN|
-|```parseAnswer```|```ans```-answer string|cleaned up string|Cleans up ```ans``` by removing html tags|
-|```parseForCSV```|```q```-question string|string for CSV|Removes escape characters and replaces ```"``` with ```""```|
-|```ripToCSV```|none|void|Rips questions and downloads as CSV|
-|```ripForQuizlet```|none|void|Rips questions and shows them in textarea to copy into Quizlet|
-|```rip```|```mode```-CSV(1) or Quizlet(0)|void|Gets user input and calls appropriate ripping function|
-|```copyText```|none|void|Copies text generated for Quizlet to clipboard|
-|```toggleTextArea```|none|void|Toggle the ripper div|
-|```setupUI```|none|void|Sets up the textarea, buttons, and dropdown|
+|`setSubmissions`|`s`- dict of submissions|void|Set `prevSubmissions`to `s`|
+|`getSubmissions`|none|`prevSubmissions`|Get `prevSubmissions`|
+|`addSubmission`|`k`- exSSN, `s`- submission|void|Set Key `k`and Value `s`of `prevSubmissions`|
+|`setInstruction`|`i`-dictionary|void|Set `instructions`to `i`|
+|`getInstructions`|none|`instructions`|Get `instructions`|
+|`addInstruction`|`k`-exSSN, `i`-instruction|void|Set Key `k`and Value `i`of `instruction`|
+|`getexSSNs`|none|array of `exSSN`s|Query user for chap/sec number and return all `exSSN`s from that node as dict|
+|`getSubmissionsFromExSSNs`|`exs`-array of exSSNs|none|Sets `prevSubmissions`to the submission from each exSSN|
+|`getInstructionsFromExSSNs`|`exs`-array of exSSNs|none|Sets `instructions`to the instructions from each exSSN|
+|`parseAnswer`|`ans`-answer string|cleaned up string|Cleans up `ans`by removing html tags|
+|`parseForCSV`|`q`-question string|string for CSV|Removes escape characters and replaces `"`with `""`|
+|`ripToCSV`|none|void|Rips questions and downloads as CSV|
+|`ripForQuizlet`|none|void|Rips questions and shows them in textarea to copy into Quizlet|
+|`rip`|`mode`-CSV(1) or Quizlet(0)|void|Gets user input and calls appropriate ripping function|
+|`copyText`|none|void|Copies text generated for Quizlet to clipboard|
+|`toggleTextArea`|none|void|Toggle the ripper div|
+|`setupUI`|none|void|Sets up the textarea, buttons, and dropdown|
 
 # Usage
 
