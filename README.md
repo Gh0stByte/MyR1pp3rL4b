@@ -13,7 +13,7 @@ This script will rip your questions and answers from [**MyProgrammingLab by Pear
 
 ## Injection (FireFox)
 
-* Download/Copy content of  [MyR1pp3rL4b.js](../blob/master/MyR1pp3rL4b.js)
+* Download/Copy content of  [MyR1pp3rL4b.js](../master/MyR1pp3rL4b.js)
 * Open Inspect Element
 * Go to Console
 * Paste into console and press *enter*
