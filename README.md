@@ -61,14 +61,17 @@ This script will rip your questions and answers from [**MyProgrammingLab by Pear
 
 * Enter **Chapter** or **Section** number
 * Download **CSV**
+
 ![](https://image.prntscr.com/image/uEha3-knRZORQV6nFoQugQ.png)
 
 
 ### Into Quizlet
 
 * Select **Rip for Quizlet** from dropdown
+
 ![](https://image.prntscr.com/image/8fZxhAk2QZeErNH-tTMCUw.png)
 * Enter **Chapter** or **Section** number
+
 ![](https://i.imgur.com/BdTTLuB.png)
 * Press **Copy**
 * Create new **Quizlet** set
@@ -76,6 +79,7 @@ This script will rip your questions and answers from [**MyProgrammingLab by Pear
 ![](https://i.imgur.com/0wAAK6Q.png)
 * Paste into the textbox
 * Set the custom delimiters to **^^^** & **~~~**
+
 ![](https://i.imgur.com/ww4sztq.png)
 * Preview cards
 ![](https://i.imgur.com/R0LQ4Eh.png)
