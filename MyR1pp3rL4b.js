@@ -26,11 +26,11 @@ r = {
   setInstructions: function(i) {
     this.instructions = i;
   },
-  addInstruction: function(k, i) {
-    this.instructions[k] = i;
-  },
   getInstructions: function() {
     return this.instructions;
+  },
+  addInstruction: function(k, i) {
+    this.instructions[k] = i;
   },
   /**
     Grab the exSSNs from the the chapter/section the user inputs
@@ -65,7 +65,7 @@ r = {
     Get dictionary of Submissions from our exSSNs
     TODO: Get only the correct ones - and remove all incorrect ones from both dicts
     */
-  getSubmissionsFromExSSNs: function(exs, callback) {
+  getSubmissionsFromExSSNs: function(exs) {
     TCAPI.getPreviousSubmissions({
         async:false, // We don't want our other functions to execute before this is done, cause we need it
         args: {exSSNs: exs, actingAsEmail: ""},  // Don't need an actingAsEmail
@@ -105,7 +105,7 @@ r = {
   /**
     Remove a bunch of stuff from the correct answers
     */
-  parseAnswer: function(ans, mode) {
+  parseAnswer: function(ans) {
     return ans.replace(/currentPage=\d+-\d+/g, "").replace(/(::::c\d=)/, "").replace(/(::::c\disCorrect=true)/, "").replace("::::", "").replace(/c\d\=/, ", ").replace(/c\disCorrect=true::::/g, "").replace("::::", "");
  },
   /**
