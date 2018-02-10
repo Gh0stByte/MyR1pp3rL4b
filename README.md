@@ -9,16 +9,8 @@ This script will rip your questions and answers from [**MyProgrammingLab by Pear
 * Rip for Quizlet
 * Native UI Integration
 
-# Usage
 
-## Injection (FireFox)
-
-* Download/Copy content of  [MyR1pp3rL4b.js](../master/MyR1pp3rL4b.js)
-* Open Inspect Element
-* Go to Console
-* Paste into console and press *enter*
-
-## r - A very creative namespace
+# r - A very creative namespace
 
 ### Variables
 
@@ -52,6 +44,14 @@ This script will rip your questions and answers from [**MyProgrammingLab by Pear
 |```toggleTextArea```|none|void|Toggle the ripper div|
 |```setupUI```|none|void|Sets up the textarea, buttons, and dropdown|
 
+# Usage
+
+## Injection (FireFox)
+
+* Download/Copy content of  [MyR1pp3rL4b.js](../master/MyR1pp3rL4b.js)
+* Open Inspect Element
+* Go to Console
+* Paste into console and press *enter*
 
 ##  Ripping
 
