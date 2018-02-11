@@ -159,7 +159,7 @@ r = {
       try {
         submission = this.prevSubmissions[key]; // Previous submissions array
         // Add the question to the textbox so we can copy it later. 
-        $("#QZTxt").val($('#QZTxt').val() +  this.instructions[key].replace(/\n\n/g, "\n").replace(/\t\t/g, "\t") + this.Q_SEPERATE_TERM + r.parseAnswer(submission[submission.length-1]["submissionText"], 1) + this.Q_SEPERATE_DEFF); 
+        $("#QZTxt").val($('#QZTxt').val() +  $.trim(this.instructions[key].replace(/\n\n/g, "\n").replace(/\t\t/g, "\t")) + this.Q_SEPERATE_TERM + r.parseAnswer(submission[submission.length-1]["submissionText"], 1) + this.Q_SEPERATE_DEFF); 
       } catch(e) {
         if(typeof e === 'TypeError') {
           console.log("No submissions found for this problem!");
@@ -219,7 +219,7 @@ r = {
     */
   setupUI: function() {
     // Create the ripper textarea and buttons
-    $("#nav-dropdown").before("<div id=ripper><textarea style=\"display:block;width:100%;\" id=QZTxt></textarea><button style=\"display:inline-block;\" onClick=r.toggleTextArea()>Hide</button><button style=\"display:inline-block;\" onClick=r.copyText()>Copy</button><button style=\"display:inline-block;\" onClick=r.rip(0)>Rip Another</button></div>"); $("#ripper").hide();
+    $("#nav-dropdown").before("<div id=ripper><textarea style=\"display:block;width:100%;\" id=QZTxt></textarea><button style=\"display:inline-block;\" onClick=r.toggleTextArea()>Hide</button><button style=\"display:inline-block;\" onClick=r.copyText()>Copy</button><button style=\"display:inline-block;\" onclick=\"r.rip(0);\">Rip Another</button></div>"); $("#ripper").hide();
   	// Create the buttons in the dropdown menu
     $("#labTable").find(".dropdown").find("ul").find("li").find("ul").append('<li><a class="bold">Ripper:</a></li><li><a href="#" onclick="r.rip(1);">&nbsp;&nbsp;&nbsp;•&nbsp;Rip to CSV</a></li><li><a href="#" onclick="r.rip(0);">&nbsp;&nbsp;&nbsp;•&nbsp;Rip for Quizlet</a></li><li><a class="italic" href="#" onclick="r.toggleTextArea();">&nbsp;&nbsp;&nbsp;•&nbsp;Toggle textbox</a></li>');
   }
