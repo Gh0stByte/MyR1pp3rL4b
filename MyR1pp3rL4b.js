@@ -38,11 +38,12 @@ r = {
 	getexSSNs: function() {
     // Get initial input
   	var a = prompt("Please enter the chapter or subsection number you want to rip. eg. 10.3");
-
+    if(a==null) return false;
   	try
   	{
       // Make sure they input a number
-      while(!parseFloat(a) && !isNaN(a)) { // Check if it's a number
+      while(!parseFloat(a)) { // Check if it's a number
+        if(a==null) return false;
         a = prompt("Input Error: You must enter the number of the chapter");
       }
     
@@ -178,24 +179,25 @@ r = {
   rip: function(mode) {
     console.log("Start ripping...");
     var ssns = r.getexSSNs(); // Grab the ssns
+    if(ssns) {
+      console.log("Getting instructions...");
+      this.getInstructionsFromExSSNs(ssns); // Set the instructions
 
-    console.log("Getting instructions...");
-    this.getInstructionsFromExSSNs(ssns); // Set the instructions
+      console.log("Getting submissions...");
+      this.getSubmissionsFromExSSNs(ssns); // Set the submissions
 
-    console.log("Getting submissions...");
-    this.getSubmissionsFromExSSNs(ssns); // Set the submissions
-
-    // Switch which type we want to rip
-    switch(mode) {
-      case 0: // If it's quizlet 
-        this.ripForQuizlet();
-        break;
-      case 1: // If it's to CSV
-        this.ripToCSV();
-        break;
-      default: // If it's something else
-        console.log("Something went wrong..");
-        break;
+      // Switch which type we want to rip
+      switch(mode) {
+        case 0: // If it's quizlet 
+         this.ripForQuizlet();
+         break;
+       case 1: // If it's to CSV
+         this.ripToCSV();
+          break;
+        default: // If it's something else
+          console.log("Something went wrong..");
+          break;
+      }
     }
   },
 
